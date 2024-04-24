@@ -118,7 +118,7 @@ void connectToServer(char ip_address[16]) {
         std::cout << buffer;
 
         // break if can't login
-        if((string)buffer == "Invalid username or password\n") {
+        if((string)buffer == "Invalid username or password\n" || (string)buffer == "Session closed\n") {
             break;
         }
 
@@ -172,7 +172,8 @@ int main() {
         // menu
         bashGradient(color2, "       ⚡ exit       ► 0\n");
         bashGradient(color2, "       ⚡ connect    ► 1\n");
-        bashGradient(color2, "       ⚡ about      ► 2\n");
+        bashGradient(color2, "       ⚡ website    ► 2\n");
+        bashGradient(color2, "       ⚡ about      ► 3\n");
         printf("\n");
         // read input
         int choice;
@@ -190,9 +191,15 @@ int main() {
             std::cout << "Enter the IP address to connect to: ";
             std::cin.getline(ip_address, sizeof(ip_address));
             connectToServer(ip_address);
+            
             printf("Press any key to continue...");
             ch = getch();
         } else if(choice == 2) {
+            system("clear");
+            bashGradient(color2, "► https://github.com/d3m0n-project/d3m0n_os\n");
+            printf("Press any key to continue...");
+            char ch = getch();
+        }  else if(choice == 3) {
             about();
             char ch = getch();
         }

@@ -186,7 +186,7 @@ void connectToServer(char ip_address[16], string user="", string pass="") {
         // Prompt the user to enter a command
         string command;
         getline(cin, command);
-        if(command == "exit" || command == "shutdown") break;
+        if(command == "exit") break;
 
 
         // Send the command to the server
@@ -196,6 +196,8 @@ void connectToServer(char ip_address[16], string user="", string pass="") {
             close(sockfd);
             return;
         }
+
+        if(command == "shutdown") break;
     }
 
     bashGradient(color1, "d3m0n client finished successfully...\n");

@@ -11,10 +11,9 @@ git clone https://github.com/d3m0n-project/d3m0n-client.git
 cd d3m0n-client
 chmod 777 *
 ./build.sh
-./client   
 ```
 or
-`git clone https://github.com/d3m0n-project/d3m0n-client.git && cd d3m0n-client && chmod 777 * && ./build.sh && ./client`
+`git clone https://github.com/d3m0n-project/d3m0n-client.git && cd d3m0n-client && chmod 777 * && ./build.sh`
 
 ## tested on 
 - Android 13 (using Termux) => aarch64

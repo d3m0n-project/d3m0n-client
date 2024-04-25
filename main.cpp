@@ -165,7 +165,7 @@ void connectToServer(char ip_address[16], string user="", string pass="") {
         //     printf("'\n");
         // }
         
-        if (buffer[bytes_received-5] == ' ' && buffer[bytes_received-17] == '>') {
+        if (buffer[bytes_received-5] == ' ' && buffer[bytes_received-17] == '>' && user != "" && pass != "") {
             if(usernameEntered) {
                 printf(pass.c_str());
                 send(sockfd, pass.c_str(), pass.length(), 0);
@@ -178,7 +178,7 @@ void connectToServer(char ip_address[16], string user="", string pass="") {
                 printf("\n");
                 continue;
             }
-            
+            printf("Auto filled username and password!\n");
         }
 
 

@@ -13,6 +13,7 @@
 #include "settings.h"
 #include <dirent.h>
 #include <fstream>
+#include <sstream>
 
 // namespace filesystem = filesystem;
 

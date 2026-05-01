@@ -1,22 +1,24 @@
 NAME      = client
 CPPFILES  = main.cpp \
             settings.cpp
-O_FILES  = $(CPPFILES:.cpp=.o)
+O_FILES   = $(CPPFILES:.cpp=.o)
 
+CXX       = g++
+CXXFLAGS  = -std=c++17
 
 all: $(NAME)
 
 $(NAME): $(O_FILES)
-  g++ $(O_FILES) -o $@ -std=c++17 -lstdc++
+	$(CXX) $(O_FILES) -o $@
 
 %.o: %.cpp
-  g++ -c $@ -o $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-  rm -rf $(O_FILES)
+	rm -f $(O_FILES)
 
 fclean: clean
-  rm -rf $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 

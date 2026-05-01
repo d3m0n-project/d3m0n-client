@@ -20,7 +20,7 @@
 
 
 #define MAX_BUFFER_SIZE 4096
-#define VERSION (string)"1.0"
+#define VERSION (string)"1.1"
 using namespace std;
 
 #define color1 196
@@ -231,7 +231,7 @@ int main() {
         printf("\n");
         bashGradient(color1, "     ┓┏┓   ┏┓           d3m0n client - V"+VERSION+R"(
     ┏┫ ┫┏┳┓┃┫┏┓            by 4re5 group       
-    ┗┻┗┛┛┗┗┗┛┛┗     https://4re5group.github.io/)");
+    ┗┻┗┛┛┗┗┗┛┛┗          https://4re5.com/)");
         printf("\n\n");
         // menu
         bashGradient(color2, "       ⚡ exit       ► 0\n");
